@@ -1,26 +1,21 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { TodoProvider } from './context/TodoContext';
+import AddTodo from './components/AddToDo';
+import TodoList from './components/TodoList';
 
-function App() {
+const App: React.FC = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+    <TodoProvider>
+      <div className='bg-gray-100 min-h-screen flex items-center justify-center'>
 
-export default App;
+      <div className="bg-white rounded shadow p-6 w-full max-w-2xl">
+        <h1 className="text-2xl font-bold text-center mb-4">To-Do List</h1>
+        <AddTodo />
+        <TodoList />
+      </div>
+      </div>
+    </TodoProvider>
+  );
+};
+
+export default App
