@@ -82,3 +82,7 @@ module.exports = {
 ## Run the Application:
 
 npm start
+
+### Check out the live demo of the app on Netlify: 
+[https://todocascade.netlify.app/](https://todocascade.netlify.app/)
+
