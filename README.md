@@ -1,46 +1,84 @@
-# Getting Started with Create React App
+# React To-Do List Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A simple and modern To-Do List application built with React and TypeScript. This project features task creation, filtering, drag-and-drop reordering, and a clean responsive UI styled with Tailwind CSS. Drag-and-drop functionality is implemented using [@hello-pangea/dnd](https://github.com/hello-pangea/dnd), a maintained fork of react-beautiful-dnd.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- **Task Management:**  
+  - Add a new task with a title, description, and due date.
+  - Mark tasks as completed or undo completion.
+  - Delete tasks.
 
-### `npm start`
+- **Filtering & Counts:**  
+  - Filter tasks by All, Completed, or Pending.
+  - Display counts of completed and pending tasks.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- **Drag-and-Drop:**  
+  - Reorder tasks using drag-and-drop functionality powered by @hello-pangea/dnd.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- **Responsive UI:**  
+  - Styled with Tailwind CSS for a modern, responsive look.
+  
+- **State Management:**  
+  - Managed using React Context API for clean and modular code.
 
-### `npm test`
+## Tech Stack
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **React** with **TypeScript**
+- **Tailwind CSS** for styling
+- **@hello-pangea/dnd** for drag-and-drop functionality
+- **UUID** for generating unique task IDs
 
-### `npm run build`
+## Project Structure
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+react-to-do-app/
+├── node_modules/
+├── public/
+├── src/
+│   ├── components/
+│   │   ├── AddTodo.tsx
+│   │   ├── TodoItem.tsx
+│   │   ├── TodoList.tsx
+│   ├── context/
+│   │   └── TodoContext.tsx
+│   ├── types/
+│   │   └── Todo.ts
+│   ├── App.tsx
+│   └── index.tsx
+├── .gitignore
+├── package.json
+├── tailwind.config.js
+├── tsconfig.json
+└── README.md
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Clone the Repository:
 
-### `npm run eject`
+git clone https://github.com/12jyo/React-ToDo-App.git
+cd react-to-do-app
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Install Dependencies:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Using npm:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+npm install
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Or using Yarn:
 
-## Learn More
+yarn install
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Configure Tailwind CSS:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Ensure your tailwind.config.js includes the correct paths. For example:
+
+module.exports = {
+  content: ["./src/**/*.{js,jsx,ts,tsx}"],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+};
+
+## Run the Application:
+
+npm start
